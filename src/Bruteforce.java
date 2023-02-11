@@ -9,27 +9,27 @@ public class Bruteforce
 {
 
     /**
-     * @param first
-     *     (first) user inputted String as a list of characters
-     * @param second
-     *     (second) user inputted String as a list of characters
+     * @param firstString
+     *     (first) user inputted String
+     * @param secondString
+     *     (second) user inputted String
      *
      * @return the array sorted from least to greatest
      */
-    public static int bruteforce( final char[] first,
-                                        final char[] second )
+    public static int bruteforce( final String firstString,
+                                        final String secondString )
     {
+        int count = 0;
 
-        for( int i = 0; i<= first.length - second.length; i++)
+        for( int i = 0; i<= firstString.length() - secondString.length(); i++)
         {
-            int count = 0;
 
-            while( count < second.length && first[ count ] == second[ count + i ] )
+            while( ( count < secondString.length() ) && ( firstString.charAt( count + i ) == secondString.charAt( count ) ) )
             {
                 count++;
             }
 
-            if( count == second.length )
+            if( count == secondString.length() )
             {
                 return i;
             }
@@ -51,19 +51,17 @@ public class Bruteforce
             System.out.println( "This program is a demonstration of Brute-Force String Matching." ) ;
 
             System.out.print( "Please input a String: " ) ;
-            String firstString = input.next() ;
-            char[] first = firstString.toCharArray();
+            String firstString = input.next();
 
-            System.out.print( "%nPlease input another String: " ) ;
-            String secondString = input.next() ;
-            char[] second = secondString.toCharArray();
+            System.out.print( "Please input another String: " ) ;
+            String secondString = input.next();
 
-            int result = bruteforce( first, second ) ;
+            int result = bruteforce( firstString, secondString ) ;
 
-            // prints out the index at which the element appears
+            // prints out the index at which the pattern appears
             if ( result == -1 )
             {
-                System.out.printf( "%nSecond String does not appear in First String.") ;
+                System.out.println( "\nSecond String does not appear in First String.") ;
 
             } // end if
             else
@@ -77,4 +75,4 @@ public class Bruteforce
     } // end main()
 
 }
-// end class SelectionSort
+// end class Bruteforce
