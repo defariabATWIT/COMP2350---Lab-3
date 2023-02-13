@@ -24,11 +24,13 @@ public class Bruteforce
         for( int i = 0; i<= firstString.length() - secondString.length(); i++)
         {
 
+            // Increments the count in the event of a character match
             while( ( count < secondString.length() ) && ( firstString.charAt( count + i ) == secondString.charAt( count ) ) )
             {
                 count++;
             }
 
+            // Returns the index if a match is detected
             if( count == secondString.length() )
             {
                 return i;
@@ -38,6 +40,7 @@ public class Bruteforce
         return -1;
 
     }   // end bruteforce()
+
 
 
     /**
