@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  * @author Laura Wysocki and Bryan DeFaria
- * @version 1.0.0 2023-02-10 Initial implementation
+ * @version 1.0.0 2023-02-16 Final implementation
  */
 public class Bruteforce
 {
